@@ -2,7 +2,7 @@
 ![Python 2.7](https://img.shields.io/badge/python-2.7-green.svg)
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 
-# Image Explanation Software for the Blind(시각장애인을 위한 이미지 설명 프로그램)
+# Image Explanation Software for the Blind (시각장애인을 위한 이미지 설명 프로그램)
 > **Image Explanation Software for the Blind**<br>
 > Taewon Kang(Sejong Academy of Science and Arts)<br>
 > 2016.01. - 2017.05.<br>
