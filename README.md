@@ -3,7 +3,13 @@
 ![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)
 
 # Image Explanation Software for the Blind(시각장애인을 위한 이미지 설명 프로그램)
+> **Image Explanation Software for the Blind**<br>
+> Taewon Kang(Sejong Academy of Science and Arts)<br>
+> 2016.01. - 2017.05.<br>
+> 
 > **Abstract:** *Image Explanation Software for the Blind is a program that reads images for the blind. When a user presses a button, Raspberry Pi takes a picture of an object and explains that image to the user using Text To Speech (TTS). You can hear the explanations for images not only in English but Korean as well. Currently, I am developing 'Error Check Algorithm' for this software. Using 'Open Source Dataset', which contains Learning Images, Test Images, Verified Images, the algorithm makes sentences correctly. My software algorithm works like a camera recognizing faces. Using Convolutional Neural Network (CNN) algorithm. CNN algorithm makes key words such as 'group of people' and 'table'. In addition, Recurrent Neural Network (RNN) algorithm makes optional words such as 'a', 'standing', 'around', etc. Finally, this algorithm makes sentences using key words and optional words and explains images using TTS. TTS and explanation algorithms can be used offline when you download library on the website. Even though the Image caption research has been conducted actively, there was no software that explained images for the blind. In addition, this machine learning algorithm based on Raspberry Pi can be applied to wearable devices such as canes, glasses, and watches that blind people use. The software is using Raspberry Pi and embedded devices, so the blind can take pictures by themselves and hear the explanations through the TTS. And, I will develop features that respond to urgent situations and include them in the machine learning so that users can hear the warning alerts. Later, I will make an algorithm that not only recognizes images but even texts and signs within images. Reward Scores will be given when the machine correctly recognizes images so that the algorithm can improve.*
+
+Contact: Taewon Kang (itschool@itsc.kr)
 
 ## Description (Korean)
 지난 2016년 1월부터, 9개월간의 과정을 거쳐 개발된 프로젝트인 '시각장애인을 위한 이미지 설명 프로그램' 을 공개합니다!
