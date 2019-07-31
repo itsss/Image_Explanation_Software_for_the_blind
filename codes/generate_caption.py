@@ -4,7 +4,7 @@
 
 
 import os
-import chainer 
+import chainer
 
 import argparse
 import os
@@ -46,13 +46,13 @@ caffe_model_place = args.caffe
 
 
 if gpu_id >= 0:
-    xp = cuda.cupy 
+    xp = cuda.cupy
     cuda.get_device(gpu_id).use()
 else:
     xp=np
 
 image_feature_dim=1024
-n_units = 512  
+n_units = 512
 
 
 
@@ -84,23 +84,23 @@ def image_read_np(file_place):
     if len(im.shape) == 2:
         im = im[:, :, np.newaxis]
         im = np.repeat(im, 3, axis=2)
-    
+
     h, w, _ = im.shape
     if h < w:
         im = skimage.transform.resize(im, (224, w*224/h), preserve_range=True)
     else:
         im = skimage.transform.resize(im, (h*224/w, 224), preserve_range=True)
 
-    
+
     h, w, _ = im.shape
     im = im[h//2-112:h//2+112, w//2-112:w//2+112]
-    
+
     rawim = np.copy(im).astype('uint8')
-    
-    
+
+
     im = np.swapaxes(np.swapaxes(im, 1, 2), 0, 1)
-    
-    
+
+
     im = im[::-1, :, :]
 
     im = im - MEAN_VALUES
@@ -126,7 +126,7 @@ def forward_one_step(cur_word, state, volatile='on'):
     h0 = model.embed(x)
     h1_in = model.l1_x(F.dropout(h0,train=False)) + model.l1_h(state['h1'])
     c1, h1 = F.lstm(state['c1'], h1_in)
-    y = model.out(F.dropout(h1,train=False)) 
+    y = model.out(F.dropout(h1,train=False))
     state = {'c1': c1, 'h1': h1}
     return state, y
 
@@ -179,12 +179,12 @@ def caption_generate(image_file_name):
             index=cuda.to_cpu(predicted_word.argmax(1))[0]
         else:
             index=predicted_word.argmax(1)[0]
-        print index2word[index]
+        print(index2word[index])
 	a = a + " " + index2word[index]
         if index2word[index]=='<EOS>':
             xp.max(predicted_word)
             x_batch_chainer = Variable(predicted_word,volatile=volatile)
-            print xp.max(F.softmax(x_batch_chainer).data)
+            print(xp.max(F.softmax(x_batch_chainer).data))
 	    tts = gTTS(text=a, lang='en')
 	    tts.save("tts.mp3")
             os.system('mpg321 tts.mp3 &')
