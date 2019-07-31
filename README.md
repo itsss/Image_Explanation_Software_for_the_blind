@@ -30,7 +30,8 @@
 위 이미지는 내가 촬영한 이미지 300개 (실제 라즈베리 파이에서 분석한 결과와 매우 흡사함) 를 분석한 결과로 완벽하게 판독한 이미지, 약간의 에러가 있는 이미지, 다소 잘못 판단한 이미지, 완전히 잘못 판단한 이미지 4개 영역으로 분류하였다. 주로 시각장애인이 보는 환경에서는 (길거리 등에 사람이 있는 환경) 온전한 역할을 수행하기에는 알맞으며, 이런 에러가 있는 이미지들도 알고리즘이 실행하면 실행할수록 계속 학습하도록 체계가 구축되어 있기 때문에, 잘못 판단한 이미지들도 지속적인 학습을 통해 수정되어 나갈 것이다. 향후 이러한 학습 데이터로 미래 사회를 Machine Learning으로 변화시킬 수 있고, 더 정확한 설명 데이터를 제공할 수 있다.
 
 ### 작품 시연
-[![Image Explanation Software for the Blind Youtube Video](https://img.youtube.com/vi/nmrqdnxmiv4/0.jpg)](https://www.youtube.com/watch?v=nmrqdnxmiv4)
+[![Image Explanation Software for the Blind Youtube Video](https://img.youtube.com/vi/nmrqdnxmiv4/0.jpg)](https://www.youtube.com/watch?v=nmrqdnxmiv4) 
+
 https://youtu.be/nmrqdnxmiv4
 
 ### 개발일지
